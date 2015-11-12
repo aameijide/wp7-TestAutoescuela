@@ -1,0 +1,13 @@
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\Bin\Debug\ApplicationIcon.png
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\Bin\Debug\Background.png
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\Bin\Debug\Test autoescuela.dll
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\Bin\Debug\Test autoescuela.pdb
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\Bin\Debug\AppManifest.xaml
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\Bin\Debug\Test_autoescuela.xap
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\obj\Debug\ResolveAssemblyReference.cache
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\obj\Debug\App.g.i.cs
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\obj\Debug\MainPage.g.i.cs
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\obj\Debug\Test autoescuela.g.resources
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\obj\Debug\Test autoescuela.dll
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\obj\Debug\Test autoescuela.pdb
+D:\Visual Studio 2010\Projects\Test autoescuela\Test autoescuela\obj\Debug\XapCacheFile.xml

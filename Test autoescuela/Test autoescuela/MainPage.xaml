@@ -1,0 +1,193 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Test_autoescuela.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot es la cuadrícula raíz donde se coloca todo el contenido de la página-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contiene el nombre de la aplicación y el título de la página-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Test autoescuela" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Examen" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel. Colocar aquí el contenido adicional-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <ListBox Name="test" Grid.Row="1">
+            <TextBlock>1: ¿Qué alumbrado llevará encendido una<LineBreak/> motocicleta durante el día?</TextBlock>
+            <CheckBox Name="unoA" Content="a) El de corto alcance o cruce." />
+            <CheckBox Name="unoB" Content="b) El de posición o el de corto alcance." />
+            <CheckBox Name="unoC" Content="c) Ninguno." />
+            <TextBlock Name="soluno"/>
+            <TextBlock>2: ¿Puede realizar un cambio de sentido en un lugar<LineBreak/> donde esté prohibido adelantar?</TextBlock>
+            <CheckBox  Name="dosA" Content ="a) Sí, excepto entre la puesta y la salida&#13; de sol, porque disminuye la visibilidad." />
+            <CheckBox  Name="dosB" Content ="b) No, salvo que el cambio de sentido&#13; esté expresamente autorizado." />
+            <CheckBox  Name="dosC" Content ="c) Sí, cuando la circulación en sentido&#13; contrario lo permita." />
+            <TextBlock Name="soldos"/>
+            <TextBlock>3: En una autopista conduciendo un camión de 3.000<LineBreak/> Kg. de M.M.A., ¿qué distancia es obligatorio dejar con <LineBreak/>el vehículo que va delante?</TextBlock>
+            <CheckBox  Name="tresA" Content ="a) 100 metros." />
+            <CheckBox  Name="tresB" Content ="b) 50 metros." />
+            <CheckBox  Name="tresC" Content ="c) La distancia de seguridad." />
+            <TextBlock Name="soltres"/>
+            <TextBlock>4: ¿Dónde está permitido que viaje un niño que no<LineBreak/> alcance los 135 centímetros de estatura?</TextBlock>
+            <CheckBox  Name="cuatroA" Content ="a) En cualquiera de los asientos traseros&#13; utilizando el cinturón para adultos." />
+            <CheckBox  Name="cuatroB" Content ="b) En un asiento delantero o trasero,&#13; utilizando siempre el cinturón de&#13; seguridad para adultos." />
+            <CheckBox  Name="cuatroC" Content ="c) En un asiento delantero o trasero&#13; utilizando siempre un dispositivo de&#13; retención homologado en función&#13; de su talla y peso." />
+            <TextBlock Name="solcuatro"/>
+            <TextBlock>5: Con esta señalización, ¿a qué velocidad debe<LineBreak/> circular?</TextBlock>
+            <Image Source="0004.jpg" Stretch="Uniform"/>
+            <CheckBox  Name="cincoA" Content ="a) Obligatoriamente a 30 km/h." />
+            <CheckBox  Name="cincoB" Content ="b) Al menos a 30 km/h." />
+            <CheckBox  Name="cincoC" Content ="c) A 30 km/h, como recomendación,&#13; durante el tramo que subsista el peligro." />
+            <TextBlock Name="solcinco"/>
+            <TextBlock>6: Una línea blanca continua sobre la calzada,<LineBreak/> sensiblemente más ancha que en el caso general...</TextBlock>
+            <CheckBox  Name="seisA" Content ="a) indica la existencia de&#13; un carril especial." />
+            <CheckBox  Name="seisB" Content ="b) sirve para delimitar, únicamente,&#13; los carriles bus." />
+            <CheckBox  Name="seisC" Content ="c) indica el borde de la calzada." />
+            <TextBlock Name="solseis"/>
+            <TextBlock>7: El seguro obligatorio, ¿cubre los daños en la<LineBreak/> persona del conductor del vehículo asegurado?</TextBlock>
+            <CheckBox  Name="sieteA" Content ="a) Sí, en todo caso." />
+            <CheckBox  Name="sieteB" Content ="b) Sí, salvo cuando el conductor es&#13; el tomador del seguro." />
+            <CheckBox  Name="sieteC" Content ="c) No." />
+            <TextBlock Name="solsiete"/>
+            <TextBlock>8: La mayor parte de las víctimas mortales por<LineBreak/> accidente de circulación se producen en...</TextBlock>
+            <CheckBox  Name="ochoA" Content ="a) vías interurbanas." />
+            <CheckBox  Name="ochoB" Content ="b) vías urbanas." />
+            <CheckBox  Name="ochoC" Content ="c) travesías." />
+            <TextBlock Name="solocho"/>
+            <TextBlock>9: ¿Cuántos espejos retrovisores tienen que llevar<LineBreak/> instalados las motocicletas?</TextBlock>
+            <CheckBox  Name="nueveA" Content ="a) Obligatoriamente uno en el lado&#13; derecho, pero pueden llevar dos." />
+            <CheckBox  Name="nueveB" Content ="b) Siempre deben llevar dos espejos,&#13; uno en cada lado." />
+            <CheckBox  Name="nueveC" Content ="c) Un espejo exterior izquierdo si no&#13; superan los 100 km/h y dos, uno en&#13; cada lado, si la velocidad es mayor." />
+            <TextBlock Name="solnueve"/>
+            <TextBlock>10: ¿Está permitida la circulación de animales por<LineBreak/> una carretera convencional?</TextBlock>
+            <CheckBox  Name="diezA" Content ="a) Sí, únicamente cuando no exista vía&#13; pecuaria." />
+            <CheckBox  Name="diezB" Content ="b) No." />
+            <CheckBox  Name="diezC" Content ="c) Sí, excepto cuando circulen en rebaño." />
+            <TextBlock Name="soldiez"/>
+            <TextBlock>11: El conductor debe...</TextBlock>
+            <CheckBox  Name="onceA" Content ="a) observar únicamente a los&#13; conductores que se&#13; aproximan por detrás." />
+            <CheckBox  Name="onceB" Content ="b) mirar siempre hacia adelante." />
+            <CheckBox  Name="onceC" Content ="c) observar constantemente lo que&#13; sucede en la vía." />
+            <TextBlock Name="solonce"/>
+            <TextBlock>12: ¿Cuál es la tasa de alcohol máxima permitida<LineBreak/> a un conductor novel?</TextBlock>
+            <CheckBox  Name="doceA" Content ="a) 0,25 miligramos de alcohol&#13; por litro de aire espirado." />
+            <CheckBox  Name="doceB" Content ="b) 0,3 miligramos de alcohol&#13; por litro de aire espirado." />
+            <CheckBox  Name="doceC" Content ="c) 0,15 miligramos de alcohol&#13; por litro de aire espirado." />
+            <TextBlock Name="soldoce"/>
+            <TextBlock>13: Cuando un vehículo accidentado comienza a<LineBreak/> arder, ¿qué se debe hacer primero?</TextBlock>
+            <CheckBox  Name="treceA" Content ="a) Apagar el fuego." />
+            <CheckBox  Name="treceB" Content ="b) Sacar rápidamente a los heridos." />
+            <CheckBox  Name="treceC" Content ="c) Ir a buscar ayuda." />
+            <TextBlock Name="soltrece"/>
+            <TextBlock>14: En esta situación, ¿qué debe hacer si va<LineBreak/> a girar a la izquierda?</TextBlock>
+            <Image Source="0033.jpg" Stretch="Uniform"/>
+            <CheckBox  Name="catorceA" Content ="a) Continuar, obedeciendo al semáforo&#13; de la derecha." />
+            <CheckBox  Name="catorceB" Content ="b) Detenerse, obedeciendo al semáforo&#13; situado a la izquierda." />
+            <CheckBox  Name="catorceC" Content ="c) Sólo detenerse si&#13; hay peatones cruzando." />
+            <TextBlock Name="solcatorce"/>
+            <TextBlock>15: ¿Está permitido colocar los triángulos de<LineBreak/> preseñalización de peligro a menos de 50 metros<LineBreak/> del vehículo averiado?</TextBlock>
+            <CheckBox  Name="quinceA" Content ="a) Sí, a esa distancia ya son visibles." />
+            <CheckBox  Name="quinceB" Content ="b) No, deben estar&#13; al menos a 100 metros." />
+            <CheckBox  Name="quinceC" Content ="c) No." />
+            <TextBlock Name="solquince"/>
+            <TextBlock>16: Para entrar en una autopista, ¿a qué<LineBreak/> velocidad debe circular?</TextBlock>
+            <CheckBox  Name="dieciseisA" Content ="a) A la máxima velocidad&#13; permitida en la autopista." />
+            <CheckBox  Name="dieciseisB" Content ="b) Siempre muy despacio&#13; para entrar con seguridad." />
+            <CheckBox  Name="dieciseisC" Content ="c) A la velocidad adecuada que permita&#13; incorporarse con seguridad." />
+            <TextBlock Name="soldieciseis"/>
+            <TextBlock>17: ¿Qué es una detención?</TextBlock>
+            <CheckBox  Name="diecisieteA" Content ="a) La inmovilización del vehículo&#13; por necesidades de la circulación." />
+            <CheckBox  Name="diecisieteB" Content ="b) Una parada por cualquier causa." />
+            <CheckBox  Name="diecisieteC" Content ="c) Un estacionamiento&#13; sin bajarse del vehículo." />
+            <TextBlock Name="soldiecisiete"/>
+            <TextBlock>18: Esta señal indica peligro por la proximidad de...</TextBlock>
+            <Image Source="p15b.jpg" Stretch="Uniform"/>
+            <CheckBox  Name="dieciochoA" Content ="a) una vía en mal estado." />
+            <CheckBox  Name="dieciochoB" Content ="b) un badén en la vía." />
+            <CheckBox  Name="dieciochoC" Content ="c) un resalto en la vía." />
+            <TextBlock Name="soldieciocho"/>
+            <TextBlock>19: La velocidad adecuada está siempre...</TextBlock>
+            <CheckBox  Name="diecinueveA" Content ="a) por debajo de la velocidad mínima." />
+            <CheckBox  Name="diecinueveB" Content ="b) por encima de la velocidad máxima&#13; y por debajo de la mínima." />
+            <CheckBox  Name="diecinueveC" Content ="c) por encima de la velocidad mínima&#13; y por debajo de la máxima." />
+            <TextBlock Name="soldiecinueve"/>
+            <TextBlock>20: ¿Tiene alguna obligación cuando su<LineBreak/> vehículo va a ser adelantado?</TextBlock>
+            <CheckBox  Name="veinteA" Content ="a) Sí, señalizar con el intermitente&#13; derecho para indicar que puede&#13; realizar la maniobra con seguridad." />
+            <CheckBox  Name="veinteB" Content ="b) No, la responsabilidad es&#13; del vehículo que adelanta." />
+            <CheckBox  Name="veinteC" Content ="c) Sí, ceñirse al borde derecho de&#13; la calzada para facilitar la maniobra." />
+            <TextBlock Name="solveinte"/>
+            <TextBlock>21: Entre otros efectos, el consumo de alcohol...</TextBlock>
+            <CheckBox  Name="veinteunoA" Content ="a) mejora la atención si se toma&#13; en pequeñas cantidades." />
+            <CheckBox  Name="veinteunoB" Content ="b) aumenta las distracciones al volante." />
+            <CheckBox  Name="veinteunoC" Content ="c) ayuda a mantener la&#13; atención al volante." />
+            <TextBlock Name="solveinteuno"/>
+            <TextBlock>22: El funcionamiento del airbag, ¿puede llegar a <LineBreak/>ser peligroso en un accidente?</TextBlock>
+            <CheckBox  Name="veintedosA" Content ="a) Sí, siempre." />
+            <CheckBox  Name="veintedosB" Content ="b) Sí, si no se lleva puesto el&#13; cinturón de seguridad." />
+            <CheckBox  Name="veintedosC" Content ="c) No." />
+            <TextBlock Name="solveintedos"/>
+            <TextBlock>23: ¿Cuál debe ser su comportamiento al<LineBreak/> ceder el paso?</TextBlock>
+            <CheckBox  Name="veintetresA" Content ="a) Detenerse en las intersecciones si se&#13; acerca otro vehículo." />
+            <CheckBox  Name="veintetresB" Content ="b) Parar y comprobar si otro usuario de&#13; la vía tiene prioridad." />
+            <CheckBox  Name="veintetresC" Content ="c) No obligar al vehículo que tiene&#13; prioridad a modificar bruscamente&#13; su trayectoria o velocidad." />
+            <TextBlock Name="solveintetres"/>
+            <TextBlock>24: ¿A qué velocidad máxima tiene permitido circular<LineBreak/> una autocaravana en una autovía?</TextBlock>
+            <CheckBox  Name="veintecuatroA" Content ="a) A 100 km/h." />
+            <CheckBox  Name="veintecuatroB" Content ="b) A 90 km/h." />
+            <CheckBox  Name="veintecuatroC" Content ="c) A 100 km/h, pudiendo superarla en&#13; 20 km/h para adelantar." />
+            <TextBlock Name="solveintecuatro"/>
+            <TextBlock>25: La fatiga, ¿provoca lentitud y falta de<LineBreak/> precisión en los movimientos?</TextBlock>
+            <CheckBox  Name="veintecincoA" Content ="a) No, la fatiga sólo produce calambres." />
+            <CheckBox  Name="veintecincoB" Content ="b) No." />
+            <CheckBox  Name="veintecincoC" Content ="c) Sí, por lo cual la conducción &#13;se hace más peligrosa." />
+            <TextBlock Name="solveintecinco"/>
+            <TextBlock>26: La tasa máxima de alcoholemia permitida en<LineBreak/> sangre para conductores profesionales es...</TextBlock>
+            <CheckBox  Name="veinteseisA" Content ="a) 0,30 gramos por litro." />
+            <CheckBox  Name="veinteseisB" Content ="b) 0,30 miligramos por litro." />
+            <CheckBox  Name="veinteseisC" Content ="c) 0,50 gramos por litro." />
+            <TextBlock Name="solveinteseis"/>
+            <TextBlock>27: Los accidentes de tráfico generan...</TextBlock>
+            <CheckBox  Name="veintesieteA" Content ="a) un enorme impacto económico,&#13; solamente." />
+            <CheckBox  Name="veintesieteB" Content ="b) daños materiales y costes sanitarios,&#13; administrativos y humanos." />
+            <CheckBox  Name="veintesieteC" Content ="c) daños materiales y costes humanos,&#13; únicamente." />
+            <TextBlock Name="solveintesiete"/>
+            <TextBlock>28: El efecto submarino se produce cuando...</TextBlock>
+            <CheckBox  Name="veinteochoA" Content ="a) el apoyacabezas está mal regulado." />
+            <CheckBox  Name="veinteochoB" Content ="b) el cinturón de seguridad no es capaz&#13; de retener adecuadamente durante un&#13; accidente y el cuerpo se desliza&#13; por debajo de él." />
+            <CheckBox  Name="veinteochoC" Content ="c) la distancia con el airbag es incorrecta." />
+            <TextBlock Name="solveinteocho"/>
+            <TextBlock>29: Al auxiliar a una víctima de un accidente de<LineBreak/> tráfico, ¿debe darle alimentos o bebidas?</TextBlock>
+            <CheckBox  Name="veintenueveA" Content ="a) Sí, si lo piden." />
+            <CheckBox  Name="veintenueveB" Content ="b) No." />
+            <CheckBox  Name="veintenueveC" Content ="c) Alimentos no, pero bebidas sí." />
+            <TextBlock Name="solveintenueve"/>
+            <TextBlock>30: Fuera de poblado, ¿qué separación lateral debe<LineBreak/> dejar una motocicleta al adelantar un camión?</TextBlock>
+            <CheckBox  Name="trentaA" Content ="a) Una distancia proporcional a&#13; la velocidad a la que circule." />
+            <CheckBox  Name="trentaB" Content ="b) Un espacio no inferior a 1,50 metros." />
+            <CheckBox  Name="trentaC" Content ="c) Una separación que considere segura&#13; en función de las circunstancias&#13; del momento." />
+            <TextBlock Name="soltrenta"/>
+            <Button Grid.Row="1" Grid.Column="0" Content ="Corregir" Click ="OnOkButtonClick" />
+            <TextBlock Name="resposta"/>
+            <!-- Fuente: http://www.todotest.com/tests/testprn.asp?vX=57777,43&T=1&Tip=3&prn=true -->
+            </ListBox>
+
+
+    </Grid>
+
+</phone:PhoneApplicationPage>
